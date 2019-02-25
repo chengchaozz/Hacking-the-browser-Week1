@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "/Users/zhuchengchao/Library/Arduino15/packages/arduino/tools/**",
+                "/Users/zhuchengchao/Library/Arduino15/packages/arduino/hardware/samd/1.6.19/**"
+            ],
+            "forcedInclude": [
+                "/Users/zhuchengchao/Library/Arduino15/packages/arduino/hardware/samd/1.6.19/cores/arduino/Arduino.h"
+            ]
+        }
+    ]
+}
