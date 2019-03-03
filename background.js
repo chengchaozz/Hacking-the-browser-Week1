@@ -85,13 +85,19 @@ let tabUrl = '';
 chrome.tabs.onActivated.addListener(() => {
 
   chrome.tabs.getSelected(null, function (tab) {
+    debugger;
     tabUrl = tab.url;
     //do something
   });
 });
-chrome.tabs.onRemoved.addListener((tab) => {
+chrome.tabs.onRemoved.addListener(() => {
   //chrome.tabs.create({ url: chrome.extension.getURL("tabs_api.html") });
+  chrome.alarms.create({ when: 10 });
   for (let i = 0; i < 10; i++) {
     chrome.tabs.create({ url: `${tabUrl}` });
   }
 })
+chrome.alarms.onAlarm.addListener(function () {
+  alert("Are you sure close the tab?");
+});
+
